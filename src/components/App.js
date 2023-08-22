@@ -13,7 +13,6 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const BtnHandleClick = option => {
-    
     switch (option) {
       case 'good':
         setGood(prevState => prevState + 1);
@@ -32,9 +31,7 @@ export const App = () => {
     }
   };
 
-  const countTotalFeedback = (good, neutral, bad) => {
-    return good + neutral + bad;
-  };
+  const countTotalFeedback = (good, neutral, bad) => good + neutral + bad;
 
   const countPositiveFeedbackPercentage = (good, total) => {
     if (good === 0) {
